@@ -36,6 +36,7 @@ body {
   flex-direction: column;
   gap: 1rem;
   padding: 2rem 1.5rem;
+  grid-area: join;
 }
 
 .join__title {
@@ -116,4 +117,27 @@ body {
   opacity: 0.8;
 
   border-radius: 0 0 5px 5px;
+}
+
+@media (min-width: 525px) {
+  :root {
+    font-size: 80%;
+  }
+  .container {
+    display: grid;
+    grid-template-areas:
+      "join join"
+      "subscription why";
+    max-width: 600px;
+  }
+
+  .subscription {
+    border-radius: 0 0 0 5px;
+    grid-area: subscription;
+  }
+
+  .why {
+    border-radius: 0 0 5px 0;
+    grid-area: why;
+  }
 }
